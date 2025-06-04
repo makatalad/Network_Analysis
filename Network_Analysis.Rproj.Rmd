@@ -6,7 +6,17 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+#insert packages
+library(igraph)
+
+#read in boba_data csv and create it into a matrix
+trial <- read.table("Boba_Data.csv", sep = ",", header = TRUE)
+
+trial <- as.matrix(trial)
+
+#create bi adjacency matrix 
+boba <- graph_from_biadjacency_matrix(trial)
+
 ```
 
 ## R Markdown
