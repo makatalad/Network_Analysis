@@ -10,7 +10,9 @@ output:
     smooth_scroll: true
     theme: journal
 ---
-# Narrative Summary
+# Boba Breakdown
+![](boba-tea-caffeine.jpg)
+
 ## Evolution of Boba
 The boba tea industry is an increasingly popular business, projected to grow from 2.83 billion to 4.78 billion by 7.81% (by 2032) and is becoming more prominent within young people (Fortune Business Insights). Boba provides personalized beverages with various tapioca pearls, making the drink more mainstream as it originated in Taiwan in the 1980s. 
 
@@ -21,7 +23,7 @@ This dataset consists of different boba shops and their most popular flavors tha
 **Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more.** 
 
 # Setup Code
-```{r setup, include=FALSE}
+```{r setup, include=TRUE}
 #insert packages
 library(igraph)
 
