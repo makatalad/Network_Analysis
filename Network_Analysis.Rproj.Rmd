@@ -11,11 +11,14 @@ output:
     theme: journal
 ---
 # Narrative Summary
+## Evolution of Boba
 The boba tea industry is an increasingly popular business, projected to grow from 2.83 billion to 4.78 billion by 7.81% (by 2032) and is becoming more prominent within young people (Fortune Business Insights). Boba provides personalized beverages with various tapioca pearls, making the drink more mainstream as it originated in Taiwan in the 1980s. 
 
+## Our Constructed Dataset
 This dataset consists of different boba shops and their most popular flavors that they sell. We create an adjacency matrix based on if the shop has it listed as their most popular flavor. The edges represent whether the boba shop considers the flavor as its most popular and the nodes are the shops and flavors. Makayla collected the data by going to the boba shop websites and gathering the most popular flavors, then inserting the data into Excel (1 representing a relationship, 0 representing no relationship). This data was collected on June 2, 2025. 
 
-Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more. 
+## Main Objective and Question
+**Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more.** 
 
 # Setup Code
 ```{r setup, include=FALSE}
