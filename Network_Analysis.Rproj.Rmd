@@ -43,8 +43,8 @@ trial <- as.matrix(trial)
 #create bi adjacency matrix 
 boba <- graph_from_biadjacency_matrix(trial)
 
-id <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29)
-mode <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2) # create mode membership
+id <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28)
+mode <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2) # create mode membership
 nodes <- data.frame(id,mode)
 
 ```
@@ -53,23 +53,27 @@ nodes <- data.frame(id,mode)
 
 ```{r boba, include=TRUE, echo=FALSE}
 #allows for the labels 
-rownames(trial) <- c("Thai_Pearl_Milk_Tea", "Milk_Tea_(Black Tea)","Milk_Tea_(Oolong Tea", "Milk_Tea_(Green Tea)", "Mango", "Strawberry", "Passion_Fruit", "Brown_Sugar", "Matcha", "Taro", "Taro_Oreo", "Oreo", "Avocado", "Cookies_and_Cream", "Ube", "Grapefruit", "Osmanthus", "Wintermelon", "Lychee")
-colnames(trial) <- c("Sharetea", "Pochi", "Happy_Lemon", "DIY_Tea_Lab", "Tealogy", "Ding_Tea", "Boba_Gem", "BÖBA", "CHICHA_San_Chen")
+rownames(trial) <- c("TPMT", "MT_Black","MT_Oolong", "MT_Green", "Mango", "Straw", "Passion", "BrownSugar", "Matcha", "Taro", "TaroOreo", "Oreo", "Avocado", "CookiesandCream", "Ube", "Grapefruit", "Osmanthus", "Wintermelon", "Lychee")
+colnames(trial) <- c("ST", "PCH", "HL", "DIY", "TLGY", "DT", "BG", "BOBA", "CSC")
 
 V(boba)$name <- c(rownames(trial), colnames(trial))
-
-
-boba <- delete_vertices(boba,1)
-
+V(boba)$size <- 15
+V(boba)$label.cex <- 0.6
+V(boba)$label.degree <- 2
 set.seed(5)
-plot(boba, vertex.label.cex = .4,
-     vertex.size = 20,
-     vertex.color=ifelse(nodes[V(boba), 2] == 1, "#7BB661", "#B66E41"),
-     vertex.label.distance = 20,
+boba_plot <- plot(boba, 
+     vertex.color=ifelse(nodes[V(boba), 2] == 1, "#FFD3B5", "#F9AFAE"),
      vertex.label = V(boba)$name,
-     vertex.label.color = "Black",
-     vertex.label.font = 2
+     vertex.label.color = "#4B2E2E",
+     vertex.label.font = 2,
+     frame.color = NA,
+     vertex.shape = ifelse(nodes[V(boba), 2] == 1, "circle", "square"),
+     edge.color = "#7E7E7E",
+     layout = layout_with_graphopt,
+     main = "Which Flavor Holds to Most Power?"
+    
     )
+
 ```
 
 # Analysis 
