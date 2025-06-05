@@ -1531,24 +1531,20 @@ incorporate it into their menu more.</strong></p>
 </div>
 <div id="setup-code" class="section level1">
 <h1>Setup Code</h1>
+<p>Data was collected from various websites of boba shops establishing a
+relationship between the popular flavor and the shop <a href="Boba_Data.csv">(download the dataset)</a>.</p>
+<p>Here are the boba tea shops we used.</p>
+<p><a href="https://www.1992sharetea.com">ShareTea</a>, <a href="https://pochibubbletea.com/">Pochi</a>, <a href="https://happylemonusa.com">Happy Lemon</a>, <a href="https://www.diytealab.com/">DIY Tea Lab</a>, <a href="https://www.tealogyusa.com">Tealogy</a>, <a href="https://www.dingtea.com/en/index/index.html">Ding Tea</a>, <a href="https://www.bobagemteahouse.com">Boba Gem</a>, <a href="https://boba-bothell.com">BÖBA</a>, <a href="https://chichasanchenny.com">CHICHA San Chen</a></p>
 <pre class="r"><code>#insert packages
-library(igraph)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;igraph&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     decompose, spectrum</code></pre>
-<pre><code>## The following object is masked from &#39;package:base&#39;:
-## 
-##     union</code></pre>
-<pre class="r"><code>#read in boba_data csv and create it into a matrix
+library(igraph)
+
+#read in boba_data csv and create it into a matrix
 trial &lt;- read.table(&quot;Boba_Data.csv&quot;, sep = &quot;,&quot;, header = TRUE)
 
 trial &lt;- as.matrix(trial)
 
 #create bi adjacency matrix 
 boba &lt;- graph_from_biadjacency_matrix(trial)</code></pre>
-<pre><code>## Warning in mde(x): NAs introduced by coercion</code></pre>
 </div>
 <div id="network-plot" class="section level1">
 <h1>Network Plot</h1>

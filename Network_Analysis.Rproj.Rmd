@@ -23,7 +23,15 @@ This dataset consists of different boba shops and their most popular flavors tha
 **Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more.** 
 
 # Setup Code
-```{r setup, include=TRUE}
+
+Data was collected from various websites of boba shops establishing a relationship between the popular flavor and the shop
+[(download the dataset)](Boba_Data.csv). 
+
+Here are the boba tea shops we used. 
+
+[ShareTea](https://www.1992sharetea.com), [Pochi](https://pochibubbletea.com/), [Happy Lemon](https://happylemonusa.com), [DIY Tea Lab](https://www.diytealab.com/), [Tealogy](https://www.tealogyusa.com), [Ding Tea](https://www.dingtea.com/en/index/index.html), [Boba Gem](https://www.bobagemteahouse.com), [BÖBA](https://boba-bothell.com), [CHICHA San Chen](https://chichasanchenny.com)
+
+```{r setup, include=TRUE, eval=FALSE}
 #insert packages
 library(igraph)
 
