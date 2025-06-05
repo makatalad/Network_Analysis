@@ -31,7 +31,7 @@ Here are the boba tea shops we used.
 
 [ShareTea](https://www.1992sharetea.com), [Pochi](https://pochibubbletea.com/), [Happy Lemon](https://happylemonusa.com), [DIY Tea Lab](https://www.diytealab.com/), [Tealogy](https://www.tealogyusa.com), [Ding Tea](https://www.dingtea.com/en/index/index.html), [Boba Gem](https://www.bobagemteahouse.com), [BÖBA](https://boba-bothell.com), [CHICHA San Chen](https://chichasanchenny.com)
 
-```{r setup, include=TRUE, eval=FALSE}
+```{r setup, include=TRUE, eval=TRUE, warning=FALSE, message=FALSE}
 #insert packages
 library(igraph)
 
@@ -47,8 +47,8 @@ boba <- graph_from_biadjacency_matrix(trial)
 
 # Network Plot
 
-```{r cars}
-summary(cars)
+```{r boba, include=TRUE, echo=FALSE}
+plot(boba, vertex.label.cex = .6)
 ```
 
 # Analysis 
