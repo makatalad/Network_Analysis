@@ -54,9 +54,12 @@ nodes <- data.frame(id,mode)
 ```{r boba, include=TRUE, echo=FALSE}
 #allows for the labels 
 rownames(trial) <- c("Thai_Pearl_Milk_Tea", "Milk_Tea_(Black Tea)","Milk_Tea_(Oolong Tea", "Milk_Tea_(Green Tea)", "Mango", "Strawberry", "Passion_Fruit", "Brown_Sugar", "Matcha", "Taro", "Taro_Oreo", "Oreo", "Avocado", "Cookies_and_Cream", "Ube", "Grapefruit", "Osmanthus", "Wintermelon", "Lychee")
-colnames(trial) <- c("X","Sharetea", "Pochi", "Happy_Lemon", "DIY_Tea_Lab", "Tealogy", "Ding_Tea", "Boba_Gem", "BÖBA", "CHICHA_San_Chen")
+colnames(trial) <- c("Sharetea", "Pochi", "Happy_Lemon", "DIY_Tea_Lab", "Tealogy", "Ding_Tea", "Boba_Gem", "BÖBA", "CHICHA_San_Chen")
 
 V(boba)$name <- c(rownames(trial), colnames(trial))
+
+
+boba <- delete_vertices(boba,1)
 
 set.seed(5)
 plot(boba, vertex.label.cex = .4,
