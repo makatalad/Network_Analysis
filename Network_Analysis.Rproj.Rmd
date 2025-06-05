@@ -43,12 +43,29 @@ trial <- as.matrix(trial)
 #create bi adjacency matrix 
 boba <- graph_from_biadjacency_matrix(trial)
 
+id <- c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29)
+mode <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2) # create mode membership
+nodes <- data.frame(id,mode)
+
 ```
 
 # Network Plot
 
 ```{r boba, include=TRUE, echo=FALSE}
-plot(boba, vertex.label.cex = .6)
+#allows for the labels 
+rownames(trial) <- c("Thai_Pearl_Milk_Tea", "Milk_Tea_(Black Tea)","Milk_Tea_(Oolong Tea", "Milk_Tea_(Green Tea)", "Mango", "Strawberry", "Passion_Fruit", "Brown_Sugar", "Matcha", "Taro", "Taro_Oreo", "Oreo", "Avocado", "Cookies_and_Cream", "Ube", "Grapefruit", "Osmanthus", "Wintermelon", "Lychee")
+colnames(trial) <- c("X","Sharetea", "Pochi", "Happy_Lemon", "DIY_Tea_Lab", "Tealogy", "Ding_Tea", "Boba_Gem", "BÖBA", "CHICHA_San_Chen")
+
+V(boba)$name <- c(rownames(trial), colnames(trial))
+
+set.seed(5)
+plot(boba, vertex.label.cex = .5,
+     vertex.size = 12,
+     vertex.color=ifelse(nodes[V(boba), 2] == 1, "#7BB661", "#B66E41"),
+     vertex.label.distance = 20,
+     vertex.label = V(boba)$name,
+     vertex.label.color = "Black",
+    )
 ```
 
 # Analysis 
