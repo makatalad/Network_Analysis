@@ -59,12 +59,13 @@ colnames(trial) <- c("X","Sharetea", "Pochi", "Happy_Lemon", "DIY_Tea_Lab", "Tea
 V(boba)$name <- c(rownames(trial), colnames(trial))
 
 set.seed(5)
-plot(boba, vertex.label.cex = .5,
-     vertex.size = 12,
+plot(boba, vertex.label.cex = .4,
+     vertex.size = 20,
      vertex.color=ifelse(nodes[V(boba), 2] == 1, "#7BB661", "#B66E41"),
      vertex.label.distance = 20,
      vertex.label = V(boba)$name,
      vertex.label.color = "Black",
+     vertex.label.font = 2
     )
 ```
 
