@@ -53,12 +53,20 @@ nodes <- data.frame(id,mode)
 
 # The Flavor's Centrality
 
-```{r boba, include=TRUE, echo=FALSE}
+## Visualization Choices 
+When creating the network, we wanted to highlight the degree in node size in order to really get the idea of the flavor that has the most power or is the most popular. For the colors, we chose something that was brighter but also subtle and for the edge color we chose a grey (not too dark not too light). For the labels we used label.cex, label.dist, and label.degree in order to get some of the labels out of the way and improve readability because the default was too cluttered. For the label color, we chose black and used the attribute to control the font to get a more bold look from the text.The layout was layout_with_graphopt because we wanted the nodes to be spread out and not layered on top of each other and a lot of the other options gathered the nodes very close.
+
+```{r labels, include=FALSE, echo=FALSE}
 #allows for the labels 
 rownames(trial) <- c("TPMT", "MTBL","MTO", "MTG", "Mango", "Straw", "Passion", "BrownSugar", "Matcha", "Taro", "TOreo", "Oreo", "Avocado", "Cook&Cream", "Ube", "Grapefruit", "Osman", "Winter", "Lychee")
 colnames(trial) <- c("ST", "PCH", "HL", "DIY", "TLGY", "DT", "BG", "BOBA", "CSC")
+original <- V(boba)$name
 V(boba)$name <- c(rownames(trial), colnames(trial))
+```
 
+## Network: Which Flavor Holds the Most Power? 
+
+```{r boba, include=TRUE, echo=TRUE}
 #changes the node size by degree, label sizes, label distance, and label degree 
 V(boba)$size <- degree(boba) * 2
 V(boba)[1:10]$label.cex <- 0.5
@@ -77,20 +85,36 @@ boba_plot <- plot(boba,
      vertex.label.family = "Arial Bold",
      frame.color = NA,
      edge.color = "#7E7E7E",
-     layout = norm_coords(layout_with_graphopt(boba), xmin = -2, xmax = 2, ymin = -2, ymax = 2),
-     main = "Which Flavor Holds the Most Power?"
+     layout = norm_coords(layout_with_graphopt(boba), xmin = -1, xmax = 1, ymin = -1, ymax = 1),
+     main = "Which Flavor Holds the Most Power?",
+     sub = "Nodes weighted by degree metric"
+     
     
      
     
     )
-
+colors <- c("#FFD3B5", "#F9AFAE")
+legend("topright", c("Flavors", "Boba Tea Shops"),pch=21,
+       col="#777777", pt.bg=colors, pt.cex=1.5, cex=.8, bty="n", ncol=1,
+       ) 
 
 
 
 ```
 
-### Thought Process
+**Original vs. Abbreviated names** 
+```{r table, include=TRUE, echo=FALSE}
+name_table <- data.frame(
+  Original = original,
+  Abbreviated = V(boba)$name
+)
 
+print(name_table, row.names = FALSE) 
+
+```
+
+## Network Meaning
+Our network is a two mode network that represents the relationship between boba tea shops and flavors. Using the degree as a metric of centrality, we displayed the flavors that are the most popular and common at all the shops. This showed that Milk Tea Black Tea, Brown Sugar, Mango, and Strawberry are the most popular/common between the Boba Tea Shops. With Cookies and Cream, Taro Oreo, Grapefruit, and Osman as the least popular/common between the Boba Tea Shops. 
 
 # Analysis 
 ## Two-Mode Network Analysis
