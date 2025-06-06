@@ -14,13 +14,13 @@ output:
 
 <style>
 h1.title {
-  color: #A9746E;  /* chocolate color */
+  color: #A085C6;  /* taro color */
 }
 </style>
 
 <style>
 .author {
-  color: #D2691E;  /* chocolate color */
+  color: #E75480;  /* raspberry red */
 }
 </style>
 
@@ -146,7 +146,7 @@ print(name_table, row.names = FALSE)
 ```
 
 ## Network Meaning
-Our network is a two mode network that represents the relationship between boba tea shops and flavors. Using the degree as a metric of centrality, we displayed the flavors that are the most popular and common at all the shops. This showed that Milk Tea Black Tea, Brown Sugar, Mango, and Strawberry are the most popular/common between the Boba Tea Shops. With Cookies and Cream, Taro Oreo, Grapefruit, and Osman as the least popular/common between the Boba Tea Shops. 
+Our network is a two mode network that represents the relationship between boba tea shops and flavors. Using the degree as a metric of centrality, we displayed the flavors that are the most popular and common at all the shops. This showed that Milk Tea Black Tea, Brown Sugar, Mango, and Strawberry are the most popular/common between the Boba Tea Shops. With Cookies and Cream, Taro Oreo, Grapefruit, and Osmanthus as the least popular/common between the Boba Tea Shops. 
 
 # Analysis 
 ## Two-Mode Network Analysis
