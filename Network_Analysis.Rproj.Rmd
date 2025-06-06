@@ -1,7 +1,7 @@
 ---
-title: "Boba_Analysis"
+title: "Bubble Network: Analyzing The Most Popular Flavors"
 author: "Sandra Awuah and Makayla Taladoc"
-date: "`r.Sys.Date()`"
+
 output: 
   html_document:
     toc: true
@@ -11,6 +11,38 @@ output:
     theme: journal
     highlight: kate
 ---
+
+<style>
+h1.title {
+  color: #A9746E;  /* chocolate color */
+}
+</style>
+
+<style>
+.author {
+  color: #D2691E;  /* chocolate color */
+}
+</style>
+
+<style>
+h1 {
+  color: #A085C6;  /* taro color */
+}
+</style>
+
+<style>
+h2 {
+  color: #E75480;  /* raspberry red */
+}
+
+</style>
+
+<style>
+h3 {
+  color: #A7D3A6;  /* Mint Green */
+}
+
+</style>
 # Boba Breakdown
 ![](boba-tea-caffeine.jpg)
 
