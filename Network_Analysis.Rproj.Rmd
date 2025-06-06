@@ -10,6 +10,7 @@ output:
     smooth_scroll: true
     theme: journal
     highlight: kate
+    code_folding: show
 ---
 
 <style>
