@@ -86,6 +86,8 @@ boba_plot <- plot(boba,
 ### Aesthetic Choices
 
 # Analysis 
+The network measure used to answer our question of which flavor is the most popular among local Bubble tea shops was a two-mode analysis and centrality measurement with betweenness.
+
 ## Two-Mode Network Analysis
 ```{r pressure, echo=FALSE}
 
@@ -129,6 +131,8 @@ betweenness(shopnet, directed = FALSE)
 ```
 Table 1. Displays the centrality of flavors using a betweenness measurement.
 
+Based on Table 1, the ube flavor has the highest betweenness score, meaning that ube seems to be a connecting flavor between the bubble tea shops. In contrast, on the other side of the spectrum is the mango flavor with the lowest betweenness score, meaning that mango wasn't a very connecting flavor between the bubble tea shops.
+
 ## Popular Bubble tea flavors by Sum
 ```{r pressure2, echo=FALSE}
 # Only keep the flavor nodes (first rows of the adjacency matrix)
@@ -163,9 +167,11 @@ ggplot(flavor_df, aes(x = Flavor, y = Popularity)) +
 
 ```
 
+Figure 1. A visual on count based on the dataset, which flavors were the most popular among the top 10 drinks for the bubble tea shops.
+
 # Conclusion
 
-As this network targets audiences for bubble tea businesses and those who have a personal interest in bubble tea by enjoying the drink. Based on our centrality analysis, the biggest significance of this network is that readers understand which flavor is the most central and popular amongst bubble tea shops from Everett to Seattle. If a flavor occurs often between bubble tea shops, that means they are good sellers, profitable, and thus a wise choice to incorporate into a menu for new aspiring bubble tea shops. Additional work that could be done on the bubble tea could be changing the variable of flavors to toppings. 
+This network targets audiences for bubble tea businesses and those who have a personal interest in bubble tea by enjoying the drink. Based on our centrality analysis, the biggest significance of this network is that readers understand which flavor is the most central and popular amongst bubble tea shops from Everett to Seattle. If a flavor occurs often between bubble tea shops for their top 10 drinks, that means they are good sellers, profitable, and thus a wise choice to incorporate into a menu for new aspiring bubble tea shops. Additional work that could be done on the bubble tea could be changing the variable of flavors to toppings. 
 
 ## Limitations
 
