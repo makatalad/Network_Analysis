@@ -11,6 +11,7 @@ output:
     theme: journal
     highlight: kate
     code_folding: show
+    df_print: paged
 ---
 
 <style>
@@ -142,7 +143,7 @@ name_table <- data.frame(
   Abbreviated = V(boba)$name
 )
 
-print(name_table, row.names = FALSE) 
+name_table
 
 ```
 
