@@ -57,8 +57,8 @@ rownames(trial) <- c("TPMT", "MT_Black","MT_Oolong", "MT_Green", "Mango", "Straw
 colnames(trial) <- c("ST", "PCH", "HL", "DIY", "TLGY", "DT", "BG", "BOBA", "CSC")
 
 V(boba)$name <- c(rownames(trial), colnames(trial))
-V(boba)$size <- 15
-V(boba)$label.cex <- 0.6
+V(boba)$size <- degree(boba) * 2.2
+V(boba)$label.cex <- 0.7
 V(boba)$label.degree <- 2
 set.seed(5)
 boba_plot <- plot(boba, 
@@ -71,6 +71,8 @@ boba_plot <- plot(boba,
      edge.color = "#7E7E7E",
      layout = layout_with_graphopt,
      main = "Which Flavor Holds to Most Power?"
+    
+     
     
     )
 
