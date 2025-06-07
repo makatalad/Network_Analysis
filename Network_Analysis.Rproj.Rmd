@@ -60,6 +60,8 @@ This dataset consists of different boba shops and their most popular flavors tha
 
 # Narrative Summary
 
+[Github To View Our Code](https://github.com/makatalad/Network_Analysis)
+
 ## Setup Code
 
 Data was collected from various websites of boba shops establishing a relationship between the popular flavor and the shop
