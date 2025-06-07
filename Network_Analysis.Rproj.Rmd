@@ -154,8 +154,11 @@ name_table
 Our network is a two mode network that represents the relationship between boba tea shops and flavors. Using the degree as a metric of centrality, we displayed the flavors that are the most popular and common at all the shops. This showed that Milk Tea Black Tea, Brown Sugar, Mango, and Strawberry are the most popular/common between the Boba Tea Shops. With Cookies and Cream, Taro Oreo, Grapefruit, and Osmanthus as the least popular/common between the Boba Tea Shops. 
 
 # Analysis 
+
+The network measure used to answer our question of which flavor is the most popular among local Bubble tea shops was a two-mode analysis and centrality measurement with betweenness.
+
 ## Two-Mode Network Analysis
-```{r pressure, echo=FALSE}
+```{r twomode, echo=FALSE}
 
 shops <- trial%*%t(trial)
 
@@ -193,13 +196,13 @@ plot(shopnet, vertex.label.cex=.6, vertex.label.color="black", vertex.size=8,
                vertex.color=ifelse(trial_nodes[V(trialnet), 2] == 1, "lightgray", "lightblue"),
                vertex.frame.color="NA", vertex.label.dist=2)
 
-# What is/are the most central policy preferences in the  network? (it is up to you to define and operationalize "central")
-degree(flavornet)  
-
-# Which organization would you identify as a potential broker of disparate policy preferences to build a coalition?
+# Betweenness scores for flavors
 betweenness(shopnet, directed = FALSE)
 
 ```
+Table 1. Displays the centrality of flavors using a betweenness measurement.
+
+Based on Table 1, the ube flavor has the highest betweenness score, meaning that ube seems to be a connecting flavor between the bubble tea shops. In contrast, on the other side of the spectrum is the mango flavor with the lowest betweenness score, meaning that mango wasn't a very connecting flavor between the bubble tea shops.
 
 ## Popular Bubble tea flavors by Sum
 ```{r pressure2, echo=FALSE}
@@ -234,6 +237,8 @@ ggplot(flavor_df, aes(x = Flavor, y = Popularity)) +
   )
 
 ```
+
+Figure 1. A visual on count based on the dataset, which flavors were the most popular among the top 10 drinks for the bubble tea shops.
 
 # Conclusion
 
