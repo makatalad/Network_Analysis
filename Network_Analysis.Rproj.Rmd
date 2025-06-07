@@ -58,7 +58,9 @@ This dataset consists of different boba shops and their most popular flavors tha
 ## Main Objective and Question
 **Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more.** 
 
-# Setup Code
+# Narrative Summary
+
+## Setup Code
 
 Data was collected from various websites of boba shops establishing a relationship between the popular flavor and the shop
 [(download the dataset)](Boba_Data.csv). 
@@ -85,8 +87,6 @@ mode <- c(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2)
 nodes <- data.frame(id,mode)
 
 ```
-
-# The Flavor's Centrality
 
 ## Visualization Choices 
 When creating the network, we wanted to highlight the degree in node size in order to really get the idea of the flavor that has the most power or is the most popular. For the colors, we chose something that was brighter but also subtle and for the edge color we chose a grey (not too dark not too light). For the labels we used label.cex, label.dist, and label.degree in order to get some of the labels out of the way and improve readability because the default was too cluttered. For the label color, we chose black and used the attribute to control the font to get a more bold look from the text.The layout was layout_with_graphopt because we wanted the nodes to be spread out and not layered on top of each other and a lot of the other options gathered the nodes very close.
