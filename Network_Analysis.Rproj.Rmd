@@ -60,9 +60,10 @@ This dataset consists of different boba shops and their most popular flavors tha
 **Our research question is which boba flavor/ingredient is the most popular/profitable? Our objective was to find out the most popular and most profitable flavor within select boba shops. This gives boba shops who don’t spotlight those flavors some insight so that they can incorporate it into their menu more.** 
 
 
-[Github To View Our Code](https://github.com/makatalad/Network_Analysis)
 
-## Setup Code
+# Setup Code
+
+[Github To View Our Code](https://github.com/makatalad/Network_Analysis)
 
 Data was collected from various websites of boba shops establishing a relationship between the popular flavor and the shop
 [(download the dataset)](Boba_Data.csv). 
