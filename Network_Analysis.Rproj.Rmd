@@ -112,6 +112,7 @@ V(boba)[11:19]$label.dist <- 1
 V(boba)[19:28]$label.dist <- 0
 V(boba)$vertex.label.degree <- pi 
 
+#our network visualization
 set.seed(5)
 boba_plot <- plot(boba, 
      vertex.color=ifelse(nodes[V(boba), 2] == 1, "#FFD3B5", "#F9AFAE"),
@@ -128,6 +129,7 @@ boba_plot <- plot(boba,
      
     
     )
+#legend 
 colors <- c("#FFD3B5", "#F9AFAE")
 legend("topright", c("Flavors", "Boba Tea Shops"),pch=21,
        col="#777777", pt.bg=colors, pt.cex=1.5, cex=.8, bty="n", ncol=1,
